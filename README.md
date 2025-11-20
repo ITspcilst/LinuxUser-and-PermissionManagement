@@ -66,9 +66,9 @@ sudo chage -d 0 Erlich
 sudo mkdir /Confidential
 ```
 **Set the directory so that:**
-	* Owner = root
-	* Group = confidential
-	* Only root and the confidential group have access
+* Owner = root
+* Group = confidential
+* Only root and the confidential group have access
 ```
 sudo chown root:confidential /confidential
 sudo chmod 770 /confidential
@@ -80,34 +80,34 @@ sudo chmod 770 /confidential
 ## 🎓 What I Learned
 
 ✔ Linux User Management
-	* Adding users with adduser
-	* Assigning users to groups
-	* Managing permissions with simple commands
+* Adding users with adduser
+* Assigning users to groups
+* Managing permissions with simple commands
 
 ✔ Password & Security Policies
-	* Using chage to force password resets
-	* Basic user lifecycle management
+* Using chage to force password resets
+* Basic user lifecycle management
 
 ✔ File System Permissions
-	* Group ownership (chown root:confidential)
-	* Permission modes (chmod 770)
-	* Applying least privilege access
+* Group ownership (chown root:confidential)
+* Permission modes (chmod 770)
+* Applying least privilege access
 
 ✔ Ticket-Based Workflow
-	* Translating requirements into commands
-	* Executing tasks safely as root
-	* Verifying results
+* Translating requirements into commands
+* Executing tasks safely as root
+* Verifying results
 
 --
 
 ## 🧠 Conclusion
 
 This project demonstrates practical skills every entry-level IT professional needs:
-	* User creation
-	* Group management
-	* Password policy enforcement
-	* Secure directory configuration
-	* Understanding Linux permissions
+* User creation
+* Group management
+* Password policy enforcement
+* Secure directory configuration
+* Understanding Linux permissions
 
 
 
