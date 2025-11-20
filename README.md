@@ -40,10 +40,9 @@ I used standard Linux command-line utilities to meet all ticket requirements.
 | :--- | :--- | :--- |
 | **1. Created the users** | `sudo adduser Bertram` | Adds the new user account **Bertram**. |
 | | `sudo adduser Erlich` | Adds the new user account **Erlich**. |
-| ![Created Users]() |
 | **2. Set temporary passwords** | `sudo passwd Bertram` | Sets the initial, temporary password. |
 | | `sudo passwd Erlich` | Sets the initial, temporary password. |
-| ![Password set successfully]() |
+| ![Created users with password]()() |
 | **3. Enforced password reset at first login** | `sudo chage -d 0 Bertram` | Sets the **last password change date** to **0** (Epoch), forcing the user to change their password immediately upon their first successful login. |
 | | `sudo chage -d 0 Erlich` | Applies the same password reset enforcement to **Erlich**. |
 | ![Enforced password reset]() |
