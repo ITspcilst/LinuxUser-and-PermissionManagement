@@ -1,9 +1,13 @@
 # 🛠️ Practical Help Desk Ticket (Linux User & Group Management)
 
+--
+
 ## 📌 Project Overview
 
 This project simulates a real Help Desk ticket that required adding new Linux users, enforcing password resets, and configuring secure access to a confidential directory using only standard Linux user/group and permission commands.
 This task demonstrates core Linux administration skills that are essential for IT Support, SysAdmin, and Security roles.
+
+--
 
 ## 📝 Ticket Requirements
 
@@ -14,10 +18,99 @@ This task demonstrates core Linux administration skills that are essential for I
 * **Add both users** to the group
 * **Restrict directory permissions** so that only the group and root can access it
 
+--
+
 ## 🧩 Steps I Completed 
+--
 ### 1️⃣ **Create the users**
 
 ```
 sudo adduser Bertram 
-```
 sudo adduser Erlich
+```
+![Creating the users]()
+--
+
+### 2️⃣ **Create a group named ‘confidential’**
+
+```
+sudo mkdir /Confidential
+```
+![Creating Confidential group]()
+
+--
+
+### **3️⃣ Add both users to the confidential group**
+
+```
+sudo usermode -a -G 0 Bertram
+sudo usermode -a -G 0 Erlich
+```
+![Adding users to Confidential group]()
+
+--
+
+## **4️⃣ Force both users to reset their password on next login**
+
+```
+sudo chage -d 0 Bertram
+sudo chage -d 0 Erlich
+```
+![Forcing users reset their password]()
+
+--
+
+## **5️⃣ Create and secure the confidential directory**
+
+```
+sudo mkdir /Confidential
+```
+**Set the directory so that:**
+	* Owner = root
+	* Group = confidential
+	* Only root and the confidential group have access
+```
+sudo chown root:confidential /confidential
+sudo chmod 770 /confidential
+```
+![Secure created directory]()
+
+--
+
+## 🎓 What I Learned
+
+✔ Linux User Management
+	* Adding users with adduser
+	* Assigning users to groups
+	* Managing permissions with simple commands
+
+✔ Password & Security Policies
+	* Using chage to force password resets
+	* Basic user lifecycle management
+
+✔ File System Permissions
+	* Group ownership (chown root:confidential)
+	* Permission modes (chmod 770)
+	* Applying least privilege access
+
+✔ Ticket-Based Workflow
+	* Translating requirements into commands
+	* Executing tasks safely as root
+	* Verifying results
+
+--
+
+## 🧠 Conclusion
+
+This project demonstrates practical skills every entry-level IT professional needs:
+	* User creation
+	* Group management
+	* Password policy enforcement
+	* Secure directory configuration
+	* Understanding Linux permissions
+
+
+
+
+ 
+ 
