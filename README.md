@@ -17,7 +17,7 @@ This task demonstrates core Linux administration skills that are essential for I
 * **Create a group** named confidential
 * **Add both users** to the group
 * **Restrict directory permissions** so that only the group and root can access it
-
+![Ticket]()
 --
 
 ## 🧩 Steps I Completed 
@@ -36,7 +36,7 @@ sudo adduser Erlich
 ### 2️⃣ **Create a group named ‘confidential’**
 
 ```
-sudo addgroup /confidential
+sudo addgroup confidential
 ```
 ![Creating confidential group](Screenshots/Adding_group_confidential.png)
 
@@ -45,8 +45,8 @@ sudo addgroup /confidential
 ### **3️⃣ Add both users to the confidential group**
 
 ```
-sudo usermode -a -G 0 Bertram
-sudo usermode -a -G 0 Erlich
+sudo usermod -a -G 0 Bertram
+sudo usermod -a -G 0 Erlich
 ```
 ![Adding users to Confidential group](Screenshots/Adding_users_to_confidential_group.png)
 
